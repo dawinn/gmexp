@@ -1,0 +1,11 @@
+main {
+    width: 98vw;
+    overflow: hidden;
+    display: flex;
+}
+img {
+    width: 1920px;
+    object-position: center;
+    transform: translateX(-50%);
+    margin: 0 50%;
+}

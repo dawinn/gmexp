@@ -1,4 +1,26 @@
 # gmexp
+
+Вторая итерация:
+
+https://dawinn.github.io/gmexp/index-v20.html
+
+https://dawinn.github.io/gmexp/index-v21.html
+
+https://dawinn.github.io/gmexp/index-v22.html
+
+https://dawinn.github.io/gmexp/about-v20.html
+
+https://dawinn.github.io/gmexp/about-v21.html
+
+https://dawinn.github.io/gmexp/equipment-v20.html
+
+https://dawinn.github.io/gmexp/equipment-v21.html
+
+https://dawinn.github.io/gmexp/engineering-v20.html
+
+
+Первоначальный вариант:
+
 https://dawinn.github.io/gmexp/ - index.html
 
 

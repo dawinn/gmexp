@@ -20,7 +20,7 @@ https://dawinn.github.io/gmexp/projects-v30.html
 
 https://dawinn.github.io/gmexp/projects-v31.html
 
-https://dawinn.github.io/gmexp/contacts-v30.html
+https://dawinn.github.io/gmexp/contacts-v31.html
 
 
 Вторая итерация:

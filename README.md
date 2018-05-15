@@ -1,5 +1,30 @@
 # gmexp
 
+Четвёртая итерация:
+
+https://dawinn.github.io/gmexp/index-v40.html
+
+https://dawinn.github.io/gmexp/about-v40.html
+
+https://dawinn.github.io/gmexp/equipment-v41.html
+
+https://dawinn.github.io/gmexp/equipment-v42.html
+
+https://dawinn.github.io/gmexp/equipment-v43.html
+
+https://dawinn.github.io/gmexp/engineering-v40.html
+
+https://dawinn.github.io/gmexp/news-v40.html
+
+https://dawinn.github.io/gmexp/projects-v40.html
+
+https://dawinn.github.io/gmexp/projects-v41.html
+
+https://dawinn.github.io/gmexp/projects-v42.html
+
+https://dawinn.github.io/gmexp/projects-v43.html
+
+
 Третья итерация:
 
 https://dawinn.github.io/gmexp/index-v30.html

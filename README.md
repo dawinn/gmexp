@@ -1,5 +1,5 @@
 # gmexp
-Четвёртая итерация:
+Пятая итерация:
 
 https://dawinn.github.io/gmexp/index-v50.html
 

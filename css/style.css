@@ -3,9 +3,21 @@ main {
     overflow: hidden;
     display: flex;
 }
-img {
+img,
+picture {
     width: 1920px;
     object-position: center;
     transform: translateX(-50%);
     margin: 0 50%;
+}
+@media only screen and (max-width: 767px) {
+main {
+    width: auto;
+
+}
+
+  img,
+  picture {
+    width: 320px;
+  }
 }

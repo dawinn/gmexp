@@ -12,7 +12,8 @@ picture {
 }
 @media only screen and (max-width: 767px) {
 main {
-    width: auto;
+    width: 320px;
+    margin: auto;
 
 }
 

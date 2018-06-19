@@ -1,0 +1,12 @@
+.page {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+
+  font-family: "Open Sans", "Verdana", sans-serif;
+  @include set-font-size ($default-font-size);
+  font-weight: normal;
+  font-style: normal;
+  color: $text-gray;
+  background-color: $bg-white;
+}

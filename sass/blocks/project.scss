@@ -1,0 +1,21 @@
+.project {
+  position: relative;
+  margin: 0 10px;
+  margin-bottom: 17px;
+  padding: 0;
+  min-width: 182px;
+  max-width: 345px;
+  background-color: $bg-white;
+  list-style: none;
+  // border-bottom: 2px solid #a5a5aa;
+
+  &:nth-child(n+3) {
+    display: none;
+  }
+}
+
+.project__img {
+  width: 100%;
+  height: auto;
+}
+

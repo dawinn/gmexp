@@ -1,0 +1,23 @@
+/// for set breakpoints
+$tablet-widths: "min-width: 768px";
+$desktop-widths: "min-width: 1140px";
+$only-mobyle-widths: "max-width: 767px";
+
+$text-black: #23282f;
+$text-gray: #55595f;
+$text-gray-footer: #a1a1a1;
+$text-white: #ffffff;
+$text-menu-item: #4f5051;
+$text-lightblue: #93a1a7;
+
+$bg-white: #ffffff;
+$bg-gray: #dcdce2;
+$bg-dark: #2b2b2b;
+$bg-red: #f73838;
+$br-line-footer: #505252;
+
+$default-font-size :(
+  null: (12px, 15px),
+  medium: (17px,30px),
+  large: (17px,30px)
+);

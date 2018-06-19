@@ -1,0 +1,15 @@
+.link {
+  display: block;
+  padding: 12px 30px;
+
+  font-family: "Geometria Bold", "Verdana", sans-serif;
+  font-size: 12px;
+  line-height: 1.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: $text-white;
+  background-color: $bg-red;
+  border: none;
+  border-radius: 2px;
+}

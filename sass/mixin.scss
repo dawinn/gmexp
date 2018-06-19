@@ -1,0 +1,44 @@
+@mixin clearfix() {
+  &::after {
+    content: "";
+
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin no-outline() {
+  outline: none;
+  background: transparent;
+
+  &::before {
+    display: none;
+  }
+}
+
+@mixin wrapper() {
+  width: 320px;
+  margin: 0 auto;
+
+  @media ($desktop-widths) {
+    width: 1050px;
+  }
+}
+
+
+@mixin set-font-size($fs-map, $fs-key: null) {
+  @if map-has-key ($fs-map, $fs-key) {
+    $fs-map: map-get($fs-map, $fs-key);
+  } @else {
+    // TODO: задать вывод ошибки
+  }
+
+  @if type-of($fs-map) == "list"  {
+    font-size: nth($fs-map, 1);
+    @if (length($fs-map) > 1) {
+      line-height: nth($fs-map, 2);
+    }
+  } @else {
+    font-size: $fs-map;
+  }
+}

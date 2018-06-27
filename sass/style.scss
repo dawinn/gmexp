@@ -1,20 +1,23 @@
 
-@import "fonts.scss";
-@import "variables.scss";
+@import 'fonts.scss';
+@import 'variables.scss';
 
-@import "mixin.scss";
-@import "blocks/link.scss";
+@import 'mixin.scss';
+@import 'scaffolding.scss';
+@import 'blocks/link.scss';
 
-@import "blocks/page.scss";
-@import "blocks/menu.scss";
-@import "blocks/page-header.scss";
+@import 'blocks/page.scss';
+@import 'blocks/menu.scss';
+@import 'blocks/header.scss';
+@import 'blocks/search.scss';
 
 
-@import "blocks/page-footer.scss";
+@import 'blocks/footer.scss';
 
 
-@import "blocks/page-content.scss";
-@import "blocks/about.scss";
-@import "blocks/news.scss";
-@import "blocks/projects.scss";
-@import "blocks/project.scss";
+@import 'blocks/content.scss';
+@import 'blocks/about.scss';
+@import 'blocks/news.scss';
+@import 'blocks/projects.scss';
+@import 'blocks/project.scss';
+

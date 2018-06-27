@@ -1,6 +1,6 @@
 .news {
   margin: 0;
-
+  padding-bottom: 22px;
   background-color: $bg-gray;
 }
 
@@ -8,18 +8,16 @@
   margin: 0;
   padding-top: 10px;
   padding-bottom: 29px;
-  font-family: "Geometria ExtraBold", "Verdana", sans-serif;
-  font-size: 18px;
+  font-family: 'Geometria', 'Verdana', sans-serif;
+  font-weight: 800;
+  @include set-font-size($h2-font-size);
   text-transform: uppercase;
   color: $text-black;
   text-align: center;
 }
 
 .news__subtitle {
-  width: 0;
-  height: 0;
-  font-size: 0;
-  line-height: 0;
+  @include hide;
 }
 
 .news__list {
@@ -29,29 +27,88 @@
   justify-content: center;
   margin: 0 auto;
   padding: 0 10px;
-  padding-bottom: 20px;
+
+  font-size: 0;
+  line-height: 0;
 }
 
-.news-item {
+.news__item {
   position: relative;
   margin: 0 10px;
   margin-bottom: 17px;
   padding: 0;
   width: calc(50% - 20px);
   min-width: 91px;
-  max-width: 172px;
   background-color: $bg-white;
   list-style: none;
   border-bottom: 2px solid #a5a5aa;
 }
 
-.news-item__img {
+.news__caption {
+  margin: 0;
+  padding: 14px 10px;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1.2em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.news__img {
   width: 100%;
   height: auto;
 }
 .news__all {
-  display: inline-block;
-  margin: 22px 50%;
-  transform: translateX(-50%);
+  display: table;
+  margin: 22px auto;
   white-space: nowrap;
+}
+
+@media ($tablet-widths) {
+  .news {
+    padding-top: 60px;
+  }
+
+  .news__wrapper {
+    @include wrapper;
+  }
+
+  .news__title {
+    @include set-font-size($h2-font-size, medium);
+  }
+
+  .news__item {
+    width: calc(25% - 20px);
+    border-bottom-color: transparent;
+  }
+}
+
+@media ($desktop-widths) {
+  .news {
+    padding-top: 93px;
+    padding-bottom: 77px;
+  }
+  .news__title {
+    @include set-font-size($h2-font-size, large);
+    text-align: initial;
+    padding: 0;
+  }
+
+  .news__subtitle {
+    @include show;
+    @include set-font-size($h2-sub-font-size, large);
+    text-transform: lowercase;
+  }
+
+  .news__list {
+    padding: 0;
+    padding-top: 33px;
+    padding-bottom: 49px;
+  }
+
+  .news__item {
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+  }
 }

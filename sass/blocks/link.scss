@@ -2,14 +2,37 @@
   display: block;
   padding: 12px 30px;
 
-  font-family: "Geometria Bold", "Verdana", sans-serif;
-  font-size: 12px;
-  line-height: 1.2em;
+  font-family: 'Geometria', 'Verdana', sans-serif;
+  font-weight: 400;
+  @include set-font-size($links-font-size);
   text-decoration: none;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 
   color: $text-white;
   background-color: $bg-red;
   border: none;
-  border-radius: 2px;
+  border-radius: 3px;
+
+  &:hover {
+    background-color: $bg-red-medium;
+  }
+
+  &:active {
+    background-color: $bg-red-dark;
+  }
+}
+
+@media ($tablet-widths) {
+  .link {
+    @include set-font-size($links-font-size, medium);
+    padding: 10px 30px;
+  }
+}
+
+@media ($desktop-widths) {
+  .link {
+    @include set-font-size($links-font-size, large);
+    padding: 10px 38px;
+  }
 }

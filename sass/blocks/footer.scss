@@ -1,0 +1,155 @@
+.footer {
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-left: 60px;
+  padding-right: 40px;
+
+  margin: 0 auto;
+  background-color: $bg-dark;
+}
+
+
+.footer__logo {
+  order: 1;
+  margin: 32px 0;
+  width: 230px;
+  height: 16px;
+  font-size: 0;
+  line-height: 0;
+}
+
+.footer__logo-wrapper {
+  width: 100%;
+  height: auto;
+}
+
+.footer__address {
+  order: 2;
+
+  padding-bottom: 24px;
+  font-family: 'Geometria', 'Verdana', sans-serif;
+  @include set-font-size($menu-footer-font-size)
+  font-weight: 400;
+  color: $text-gray-footer;
+
+  & p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+.footer__address-label {
+  color: $text-white;
+  text-transform: uppercase;
+}
+
+.footer__menu {
+  order: 3;
+}
+
+.footer__copyright {
+  order: 4;
+
+  margin: 20px auto;
+  width: 100%;
+  font-size: 9.59px;
+  line-height: 23px;
+  color: $text-lightblue;
+  text-align: center;
+
+}
+
+.footer__menu {
+  display: block;
+  padding-bottom: 24px;
+  padding-top: 25px;
+
+  border-top: 1px solid $br-line-footer;
+  border-bottom: 1px solid $br-line-footer;
+
+  & a {
+    font-family: 'Geometria', 'Verdana', sans-serif;
+    font-weight: 400;
+    font-size: 9.59px;
+    line-height: 20px;
+    color: $text-lightblue;
+    text-transform: uppercase;
+  }
+}
+
+@media ($tablet-widths) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 50px;
+  }
+
+  .footer__address {
+    order: 1;
+    width: calc(50% - 40px);
+    @include set-font-size($menu-footer-font-size, medium);
+  }
+
+  .footer__logo {
+    order: 2;
+    margin: 0;
+    margin-bottom: 30px;
+    width: 213px;
+    height: 119px;
+  }
+
+  .footer__menu {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding-right: 50px;
+  }
+
+}
+
+@media ($desktop-widths) {
+  .footer {
+    @include wrapper;
+    padding: 0;
+    margin: 0;
+    padding-top: 80px;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer__address {
+    width: auto;
+    margin-right: 103px;
+    font-size: 15px;
+    line-height: 33px;
+    text-transform: uppercase;
+  }
+
+  .footer__menu {
+    order: 2;
+    flex-grow: 1;
+    width: auto;
+    padding: 0;
+    padding-top: 4px;
+    border: none;
+  }
+
+  .footer__logo {
+    order: 3;
+    margin-left: 56px;
+  }
+
+  .footer__copyright {
+    margin-top: 46px;
+    padding-top: 14px;
+    @include set-font-size($menu-footer-font-size, large);
+    text-transform: uppercase;
+
+     border-top: 1px solid $br-line-footer;
+  }
+}

@@ -7,22 +7,22 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page">
-  <header class="page-header">
-    <div class="page-header__logo">
+  <header class="header">
+    <div class="header__logo">
       <picture>
-        <img src="/img/logo.png" width="151" height="11" alt="Логотип Гормашэкспорт">
+        <img src="./img/logo.svg" width="151" height="12" alt="Гормашэкспорт">
       </picture>
 
     </div>
-    <div class="page-header__search  search">
+    <div class="header__search  search">
       <form class="search__form">
-        <label class="search__label">
+        <label class="search__label" for="searchID">
           Поиск
         </label>
-       <!--  <input type="search" name="searchLine" id="searchID" placeholder="Поиск по сайту"> -->
+        <input class="search__line" type="text" name="searchLine" id="searchID" placeholder="Поиск по сайту">
       </form>
     </div>
-    <nav class="page-header__menu  menu menu--closed  ">
+    <nav class="header__menu  menu menu--closed  ">
       <button class="menu__toggle" type="button">Открыть меню</button>
       <div class="menu__wrapper">
         <ul class="menu__list">
@@ -52,12 +52,15 @@
           <li class="menu__item">
             <a href="" >Контакты</a>
           </li>
+          <li class="menu__item  menu__item--ruen">
+            <a href="">ru</a><a href="">en</a>
+          </li>
         </ul>
       </div>
     </nav>
   </header>
-  <main class="page-content">
-    <h1 class="page-content__title page-content__title--index">Гормашэкспорт</h1>
+  <main class="content">
+    <h1 class="content__title  content__title--index">Гормашэкспорт</h1>
     <section class="about">
       <h2 class="about__title">О предприятии</h2>
       <p class="about__subtitle">основные виды деятельности</p>
@@ -68,7 +71,7 @@
         </li>
         <li class="about__item">
           <h3 class="about__item-caption">Обогащение руд</h3>
-          <p>Совокупность методов разделения металлов и минералов друг от друга по разнице их физ. или хим. свойств.</p>
+          <p>Совокупность методов разделения металлов и минералов друг от друга по разнице их физ. или хим.свойств.</p>
         </li>
         <li class="about__item">
           <h3 class="about__item-caption">Обогащение угля</h3>
@@ -90,42 +93,42 @@
       <a href="" class="about__more link">Подробнее</a>
     </section>
     <section class="news">
-      <div class="wrapper">
+      <div class="news__wrapper">
         <h2 class="news__title">Новости</h2>
         <p class="news__subtitle">Последние события</p>
         <div class="news__list">
-          <section class="news-item">
-            <div class="news-item__img-wrap">
-              <img src="./img/news-1.png" class="news-item__img" width="257" height="270">
+          <section class="news__item">
+            <div class="news__img-wrap">
+              <img src="./img/news-1.png" class="news__item__img" width="257" height="270">
             </div>
-            <h3 class="news-item__title">
+            <h3 class="news__img">
               "Coal Washing", Индия
             </h3>
             <p>Участие в выставке</p>
           </section>
-          <section class="news-item">
-            <div class="news-item__img-wrap">
-              <img src="./img/news-2.png" class="news-item__img" width="257" height="270">
+          <section class="news__item">
+            <div class="news__img-wrap">
+              <img src="./img/news-2.png" class="news__item__img" width="257" height="270">
             </div>
-            <h3 class="news-item__title">
+            <h3 class="news__img">
+              Химия 2018
+            </h3>
+            <p>Участие в выставке</p>
+          </section>
+          <section class="news__item">
+            <div class="news__img-wrap">
+              <img src="./img/news-1.png" class="news__item__img" width="257" height="270">
+            </div>
+            <h3 class="news__img">
               "Coal Washing", Индия
             </h3>
             <p>Участие в выставке</p>
           </section>
-          <section class="news-item">
-            <div class="news-item__img-wrap">
-              <img src="./img/news-1.png" class="news-item__img" width="257" height="270">
+          <section class="news__item">
+            <div class="news__img-wrap">
+              <img src="./img/news-2.png" class="news__item__img" width="257" height="270">
             </div>
-            <h3 class="news-item__title">
-              "Coal Washing", Индия
-            </h3>
-            <p>Участие в выставке</p>
-          </section>
-          <section class="news-item">
-            <div class="news-item__img-wrap">
-              <img src="./img/news-2.png" class="news-item__img" width="257" height="270">
-            </div>
-            <h3 class="news-item__title">
+            <h3 class="news__img">
               "Coal Washing", Индия
             </h3>
             <p>Участие в выставке</p>
@@ -135,20 +138,20 @@
       </div>
     </section>
 
-    <section class="projects wrapper">
+    <section class="projects">
       <h2 class="projects__title">Реализованные проекты</h2>
       <p class="projects__subtitle">За это время было спроектировано и внедрено в производство большое количество обогатительного оборудования и комплексных проектов под ключ и разработаны новые технологии обогащения минералов. Ниже приведены примеры работ.</p>
       <div class="projects__filter">
-        <label><input type="radio" name="filterProjects" checked="checked">Все проекты</label>
-        <label><input type="radio" name="filterProjects" >Введение технологий</label>
-        <label><input type="radio" name="filterProjects" >Модернизация</label>
-        <label><input type="radio" name="filterProjects" >Обогащение</label>
-        <label><input type="radio" name="filterProjects" >Тех.аудит</label>
+        <input type="radio" name="filterProjects" checked="checked" id='filterProjects1'><label for='filterProjects1'>Все проекты</label>
+        <input type="radio" name="filterProjects" id='filterProjects2'><label for='filterProjects2'>Введение технологий</label>
+        <input type="radio" name="filterProjects" id='filterProjects3'><label for='filterProjects3'>Модернизация</label>
+        <input type="radio" name="filterProjects" id='filterProjects4'><label for='filterProjects4'>Обогащение</label>
+        <input type="radio" name="filterProjects" id='filterProjects5'><label for='filterProjects5'>Тех.аудит</label>
       </div>
       <div class="projects__list">
         <section class="project">
           <div class="project__img-wrap">
-              <img src="./img/project-1.png" class="project__img" width="351" height="226">
+              <img src="./img/project-1.jpg" class="project__img" width="351" height="226">
           </div>
           <div class="project__caption">
             <h3 class="project__title">"Кольская ГМК"</h3>
@@ -157,7 +160,7 @@
         </section>
         <section class="project">
           <div class="project__img-wrap">
-              <img src="./img/project-2.png" class="project__img" width="351" height="226">
+              <img src="./img/project-2.jpg" class="project__img" width="350" height="225">
           </div>
           <div class="project__caption">
             <h3 class="project__title">
@@ -168,18 +171,29 @@
         </section>
         <section class="project">
           <div class="project__img-wrap">
-            <img src="http://via.placeholder.com/351x226" class="project__img" width="351" height="226">
+            <img src="./img/project-3.jpg" class="project__img" width="350" height="225">
           </div>
           <div class="project__caption">
             <h3 class="project__title">
-              "Кольская ГМК"
+              ОАО "Шахта Полосухинская"
             </h3>
             <p>Модернизация схемы сгущения3</p>
           </div>
         </section>
         <section class="project">
           <div class="project__img-wrap">
-            <img src="http://via.placeholder.com/351x226" class="project__img" width="351" height="226">
+            <img src="./img/project-4.jpg" class="project__img" width="350" height="225">
+          </div>
+          <div class="project__caption">
+            <h3 class="project__title">
+              ТОО «Ульба-ФторКомплекс»
+            </h3>
+            <p>разработка технологического регламента </p>
+          </div>
+        </section>
+        <section class="project">
+          <div class="project__img-wrap">
+            <img src="./img/project-5.jpg" class="project__img" width="350" height="225">
           </div>
           <div class="project__caption">
             <h3 class="project__title">
@@ -190,18 +204,7 @@
         </section>
         <section class="project">
           <div class="project__img-wrap">
-            <img src="http://via.placeholder.com/351x226" class="project__img" width="351" height="226">
-          </div>
-          <div class="project__caption">
-            <h3 class="project__title">
-              "Кольская ГМК"
-            </h3>
-            <p>Модернизация схемы сгущения</p>
-          </div>
-        </section>
-        <section class="project">
-          <div class="project__img-wrap">
-            <img src="http://via.placeholder.com/351x226" class="project__img" width="351" height="226">
+            <img src="./img/project-6.jpg" class="project__img" width="350" height="225">
           </div>
           <div class="project__caption">
             <h3 class="project__title">
@@ -214,13 +217,13 @@
       <a href="" class="projects__all link">Ещё проекты</a>
     </section>
   </main>
-  <footer class="page-footer">
-    <section class="page-footer__address">
-      <p><span class="page-footer__address-label">Адрес&nbsp;:&nbsp;</span>г.Новосибирск,<br> ул.Фрунзе, 51, помещение 8</p>
-      <p><span class="page-footer__address-label">Телефон&nbsp;:&nbsp;</span>+7 (383) 360-09-26</p>
-      <p><span class="page-footer__address-label">Email&nbsp;:&nbsp;</span>goraexport@mail.ru</p>
+  <footer class="footer">
+    <section class="footer__address">
+      <p><span class="footer__address-label">Адрес&nbsp;:&nbsp;</span>г.Новосибирск,<br> ул.Фрунзе, 51, помещение 8</p>
+      <p><span class="footer__address-label">Телефон&nbsp;:&nbsp;</span>+7 (383) 360-09-26</p>
+      <p><span class="footer__address-label">Email&nbsp;:&nbsp;</span>goraexport@mail.ru</p>
     </section>
-    <nav class="page-footer__menu  menu  menu--footer">
+    <nav class="footer__menu  menu  menu--footer">
       <ul class="menu__list">
         <li class="menu__item">
           <a href="">Главная</a>
@@ -248,6 +251,8 @@
         <li class="menu__item">
           <a href="">Статьи</a>
         </li>
+      </ul>
+      <ul class="menu__list">
         <li class="menu__item">
           <a href="">Контакты</a>
         </li>
@@ -257,19 +262,20 @@
         <li class="menu__item">
           <a href="">Карта сайта</a>
         </li>
-        <li class="menu__item">
+        <li class="menu__item  menu__item--google">
           <a href="">g+</a>
         </li>
 
       </ul>
     </nav>
-    <div class="page-footer__logo">
-      <picture class="page-footer__logo-wrapper">
-        <img src="./img/logo-footer-mobile.png" width="230" height="16" alt="logo">
+    <div class="footer__logo">
+      <picture class="header__logo-img">
+        <source media="(min-width: 768px)" srcset="./img/logo-big.svg" width='213'>
+        <img src="./img/logo-wt.svg" width="230" height="16" alt="Гормашэкспорт">
       </picture>
     </div>
-    <div class="page-footer__copyright">
- 2018 Гормашэкспорт
+    <div class="footer__copyright">
+  © 2018 COPYRIGHT Гормашэкспорт
     </div>
   </footer>
 

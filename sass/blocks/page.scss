@@ -1,12 +1,17 @@
 .page {
-  margin: 0;
-  padding: 0;
-  min-width: 320px;
-
-  font-family: "Open Sans", "Verdana", sans-serif;
-  @include set-font-size ($default-font-size);
-  font-weight: normal;
-  font-style: normal;
-  color: $text-gray;
   background-color: $bg-white;
+  color: $text-gray;
+  font-family: 'Open Sans', 'Arial' , sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  @include set-font-size($default-font-size);
+  margin: 0;
+  min-width: 320px;
+  padding: 0;
+}
+
+@media ($desktop-widths) {
+  .page {
+    @include set-font-size($default-font-size, large);
+  }
 }

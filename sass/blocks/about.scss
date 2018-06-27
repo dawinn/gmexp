@@ -6,15 +6,13 @@
 
 .about__title,
 .about__subtitle {
-  width: 0;
-  height: 0;
-  font-size: 0;
-  line-height: 0;
+  @include hide;
 }
 
 .about__list {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   flex-wrap: wrap;
   margin: 0 auto;
   padding: 0 10px;
@@ -30,32 +28,129 @@
   padding-right: 20px;
   padding-bottom: 25px;
   min-width: 182px;
-  max-width: 345px;
+  max-width: 250px;
   background-color: $bg-white;
   list-style: none;
   border-bottom: 2px solid #a5a5aa;
-}
 
-.about__item::before {
-  content: "";
-  position: absolute;
-  top: 21px;
-  left: 30px;
-  width: 23px;
-  height: 23px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: 30px;
+    width: 23px;
+    height: 23px;
 
-  background-color: #c8c8cc;
-  border-radius: 3px;
+    background-color: #c8c8cc;
+    border-radius: 3px;
+  }
+
+  &:hover {
+    box-shadow: 0 -2px 2px 0 rgba(255, 255, 255, 0.9);
+  }
+
+  &:hover::before {
+    background-color: $bg-red;
+
+  }
+
+  &:active {
+    box-shadow: 0 -1px 2px 0 #a5a5aa;
+  }
+
+  &:active::before {
+     background-color: $bg-red-dark;
+  }
 }
 
 .about__item-caption {
   margin: 0;
-  font-family: "Geometria Medium", "Verdana", sans-serif;
-  font-size: 17px;
+  font-family: "Geometria", "Verdana", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
   line-height: 21px;
   color: $text-black;
 }
 
 .about__more {
   display: none;
+}
+
+@media ($tablet-widths) {
+  .about {
+    @include wrapper;
+    margin-bottom: 60px;
+    background-color: $bg-white;
+  }
+
+  .about__item {
+    padding-left: 70px;
+    padding-right: 10px;
+    padding-bottom: 25px;
+    min-width: 182px;
+    border-bottom-color: transparent;
+    line-height: 18px;
+
+    &::before {
+      left: 0px;
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .about__more {
+    display: table;
+    margin: 22px auto;
+    white-space: nowrap;
+  }
+}
+
+@media ($desktop-widths) {
+  .about {
+    margin-bottom: 94px;
+    padding-top: 100px;
+  }
+
+  .about__title,
+  .about__subtitle {
+    @include show;
+    @include set-font-size($h2-font-size, large);
+    font-family: 'Geometria', 'Verdana', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: $text-black;
+  }
+
+  .about__subtitle {
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-weight: normal;
+    text-transform: lowercase;
+    font-size: 16px;
+    color: $text-gray-light;
+  }
+
+  .about__item-caption {
+    font-size: 20px;
+    line-height: 16px;
+  }
+
+  .about__list {
+    padding-top: 30px;
+    padding-bottom: 35px;
+  }
+
+  .about__item {
+    margin: 0;
+    padding-left: 50px;
+    padding-right: 10px;
+    padding-bottom: 0;
+    min-width: 182px;
+    width: auto;
+    background-color: $bg-white;
+    list-style: none;
+
+    &:nth-child(even) {
+      margin: 0;
+    }
+  }
 }

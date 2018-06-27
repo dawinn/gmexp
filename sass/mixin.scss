@@ -1,30 +1,66 @@
-@mixin clearfix() {
+@mixin clearfix {
   &::after {
-    content: "";
+    clear: both;
+    content: '';
 
     display: table;
-    clear: both;
   }
 }
 
-@mixin no-outline() {
-  outline: none;
+@mixin no-outline {
   background: transparent;
+  outline: none;
 
   &::before {
     display: none;
   }
 }
 
-@mixin wrapper() {
-  width: 320px;
+@mixin wrapper {
   margin: 0 auto;
 
+   @media ($tablet-widths) {
+
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 750px;
+  }
+
   @media ($desktop-widths) {
-    width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 1110px;
+    width: 100%;
   }
 }
 
+@mixin hide {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+}
+
+@mixin show {
+  position: initial;
+
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+}
 
 @mixin set-font-size($fs-map, $fs-key: null) {
   @if map-has-key ($fs-map, $fs-key) {
@@ -33,7 +69,7 @@
     // TODO: задать вывод ошибки
   }
 
-  @if type-of($fs-map) == "list"  {
+  @if type-of($fs-map) == 'list'  {
     font-size: nth($fs-map, 1);
     @if (length($fs-map) > 1) {
       line-height: nth($fs-map, 2);

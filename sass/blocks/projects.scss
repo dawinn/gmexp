@@ -8,8 +8,9 @@
   margin: 0;
   padding-top: 27px;
   padding-bottom: 29px;
-  font-family: "Geometria ExtraBold", "Verdana", sans-serif;
-  font-size: 18px;
+  font-family: 'Geometria', 'Verdana', sans-serif;
+  font-weight: 800;
+  @include set-font-size($h2-font-size);
   text-transform: uppercase;
   color: $text-black;
   text-align: center;
@@ -33,12 +34,77 @@
   justify-content: center;
   margin: 0 auto;
   padding: 0 10px;
-  padding-bottom: 35px;
 }
 
 .projects__all {
-  display: inline-block;
-  margin: 22px 50%;
-  transform: translateX(-50%);
+  display: table;
+  margin: 22px auto;
   white-space: nowrap;
 }
+
+@media ($desktop-widths) {
+  .projects {
+    @include wrapper();
+    margin-bottom: 100px;
+  }
+
+  .projects__title {
+    @include set-font-size($h2-font-size, large);
+    text-align: initial;
+    padding: 0;
+    padding-top: 112px;
+    margin-bottom: 22px;
+  }
+
+  .projects__subtitle {
+    @include show;
+    @include set-font-size($h2-sub-font-size, large);
+    text-transform: lowercase;
+  }
+
+  .projects__filter {
+    display: flex;
+    padding-top: 38px;
+    margin-bottom: 70px;
+  }
+
+  .projects__filter input {
+    display: none;
+  }
+
+  .projects__filter label {
+    display: block;
+    padding: 5px 19px;
+    margin-right: 10px;
+
+    font-family: 'Geometria', 'Verdana', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: none;
+
+    color: $text-gray-light;
+    border: 1px solid $text-gray-light;
+    border-radius: 3px;
+
+  }
+
+  .projects__filter input:checked + label,
+  .projects__filter label:hover {
+    color: $text-white;
+    background-color: $bg-red;
+    border-color: $bg-red;
+  }
+
+  .projects__list {
+    padding: 0;
+    margin-bottom: 41px;
+    justify-content: space-between;
+
+  }
+
+  .projects__all {
+    margin: 22px auto;
+    margin-bottom: 100px;
+  }
+}
+

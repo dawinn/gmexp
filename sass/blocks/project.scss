@@ -55,7 +55,7 @@
 @media ($desktop-widths) {
   .project {
     width: 350px;
-    max-width: initial;
+    max-width: none;
     margin: 0;
     margin-bottom: 30px;
   }

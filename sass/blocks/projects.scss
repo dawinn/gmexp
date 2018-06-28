@@ -42,9 +42,15 @@
   white-space: nowrap;
 }
 
+@media ($tablet-widths) {
+  .projects__wrapper {
+    @include wrapper();
+  }
+}
+
 @media ($desktop-widths) {
   .projects {
-    @include wrapper();
+    padding-top: 30px;
     margin-bottom: 100px;
   }
 

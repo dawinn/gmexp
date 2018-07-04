@@ -1,0 +1,79 @@
+.breadcrumbs {
+  padding-top: 30px;
+  margin-bottom: 26px;
+  font-size: 13px;
+  line-height: 20px;
+
+  & a {
+    padding-bottom: 2px;
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-weight: normal;
+
+    color: $text-red;
+    text-decoration: none;
+  }
+
+  & a + a{
+    position: relative;
+    margin-left: 10px;
+    padding-left: 21px;
+  }
+
+  & a + a:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 9px;
+    display: block;
+    width: 11px;
+    height: 1px;
+    background-color: $text-black;
+  }
+
+   & a + a:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    display: block;
+    width: 4px;
+    height: 4px;
+
+    border-top: 1px solid $text-black;
+    border-right: 1px solid $text-black;
+    transform: rotate(45deg);
+  }
+
+
+  & a[href] {
+    color: $text-black;
+    box-shadow: 0 1px 0 0 $text-black;
+  }
+
+  & a[href]:hover {
+    opacity: 0.4;
+  }
+
+  & a[href]:active {
+    opacity: 0.8;
+  }
+}
+
+@media ($tablet-widths) {
+  .breadcrumbs {
+    padding-top: 60px;
+    margin-bottom: 30px;
+    font-size: 14px;
+
+    & a + a:before {
+      bottom: 10px;
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .breadcrumbs {
+    padding-top: 92px;
+    margin-bottom: 35px;
+  }
+}

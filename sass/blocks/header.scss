@@ -6,6 +6,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  color: $text-gray;
   background: #fafbfd;
 
   border-bottom: 1px solid #dddddd;
@@ -22,7 +23,6 @@
   order: 2;
 
 }
-svg.fil0 {fill:#E1251D}
 
 .header__logo a[href]:hover {
   opacity: 0.6;

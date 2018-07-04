@@ -1,13 +1,19 @@
 .news {
+  position: relative;
   margin: 0;
   padding-bottom: 22px;
   background-color: $bg-gray;
 }
 
+.news__wrapper {
+  padding: 0 10px;
+}
+
 .news__title {
   margin: 0;
-  padding-top: 10px;
-  padding-bottom: 29px;
+  margin-top: 13px;
+  margin-bottom: 4px;
+  padding: 0;
   font-family: 'Geometria', 'Verdana', sans-serif;
   font-weight: 800;
   @include set-font-size($h2-font-size);
@@ -24,10 +30,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 auto;
-  padding: 0 10px;
-
+  justify-content: space-between;
+  margin: 0 -10px;
   font-size: 0;
   line-height: 0;
 }
@@ -35,19 +39,45 @@
 .news__item {
   position: relative;
   margin: 0 10px;
-  margin-bottom: 17px;
+  margin-bottom: 25px;
   padding: 0;
   width: calc(50% - 20px);
   min-width: 91px;
-  background-color: $bg-white;
+  background-color: $bg-dark;
+  color: $text-white;
   list-style: none;
   border-bottom: 2px solid #a5a5aa;
+
+ & p {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0 10px;
+ }
+}
+
+.news--index {
+  & .news__list {
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  & .news__item {
+    background-color: $bg-white;
+    color: inherit;
+  }
+
+  & .news__title {
+    color: $text-black;
+  }
 }
 
 .news__caption {
   margin: 0;
-  padding: 14px 10px;
-  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 4px;
+  padding: 0 10px;
+  font-family: 'Geometria', 'Verdana', sans-serif;
+  font-weight: 400;
   font-size: 11px;
   line-height: 1.2em;
   text-align: center;
@@ -64,9 +94,16 @@
   white-space: nowrap;
 }
 
+.news__pagination {
+  position: relative;
+  bottom: -20px;
+  padding-bottom: 40px;
+}
+
 @media ($tablet-widths) {
-  .news {
+  .news--index {
     padding-top: 60px;
+
   }
 
   .news__wrapper {
@@ -78,15 +115,36 @@
   }
 
   .news__item {
-    width: calc(25% - 20px);
+    width: calc(25% - 28px);
     border-bottom-color: transparent;
+  }
+
+  .news__caption {
+    font-size: 12px;
+  }
+
+  .news__pagination {
+    bottom: 53px;
+    padding-bottom: 0;
   }
 }
 
 @media ($desktop-widths) {
   .news {
-    padding-top: 93px;
+
     padding-bottom: 77px;
+  }
+
+  .news--index {
+    padding-top: 80px;
+
+
+    & .news__list {
+      margin: 0 -10px;
+      padding: 0;
+      padding-top: 30px;
+      padding-bottom: 45px;
+    }
   }
   .news__title {
     @include set-font-size($h2-font-size, large);
@@ -103,12 +161,16 @@
   .news__list {
     padding: 0;
     padding-top: 33px;
-    padding-bottom: 49px;
+    padding-bottom: 45px;
   }
 
   .news__item {
     font-size: 13px;
     line-height: 18px;
     text-align: center;
+  }
+
+  .news__pagination {
+    bottom: 53px;
   }
 }

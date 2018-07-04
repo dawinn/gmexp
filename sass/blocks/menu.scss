@@ -118,8 +118,6 @@
 .menu__item {
   font-family: 'Geometria', 'Verdana', sans-serif;
   font-weight: 500;
-  // font-size: 17px;
-  // line-height: 24px;
   @include set-font-size($menu-main-font-size);
   text-transform: uppercase;
 }
@@ -141,6 +139,9 @@
   text-decoration: none;
 }
 
+.menu__list--additional .menu__item a {
+  color: $text-submenu-item;
+}
 
 .menu__item a[href]:hover {
   color: rgba($text-black,0.6);

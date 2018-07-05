@@ -18,20 +18,13 @@
   font-size: 26px;
   font-family: 'Geometria', 'Verdana', sans-serif;
   font-weight: 700;
-  line-height: 34px;
+  line-height: 1em;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
 
   &.content__title--index {
     font-size: 0;
-  }
-}
-
-
-@media ($only-mobyle-widths) {
-  .content__title {
-
   }
 }
 
@@ -44,7 +37,7 @@
     min-height: 240px;
     font-size: 60px;
     font-weight: 800;
-    line-height: 240px;
+
   }
 }
 
@@ -52,6 +45,6 @@
   .content__title {
     min-height: 409px;
     font-size: 90px;
-    line-height: 409px;
+
   }
 }

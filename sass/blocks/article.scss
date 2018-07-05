@@ -12,6 +12,56 @@
     margin: 0;
     margin-bottom: 50px;
   }
+
+   & h3 {
+    @include set-font-size($menu-main-font-size);
+    font-weight: bolder;
+    line-height: 1.2em;
+    text-transform: uppercase;
+  }
+
+  & strong {
+    color: $text-red;
+    font-weight: inherit;
+  }
+
+  & table {
+    margin-bottom: 40px;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+
+  & tr {
+
+  }
+
+  & td,
+  & th {
+    padding: 6px 5px;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid #383838;
+  }
+
+  & thead,
+  & th {
+    background-color: $bg-gray;
+  }
+
+  & ul,
+  & ol {
+    margin: 0;
+    margin-top: -34px;
+    padding: 0;
+    padding-left: 16px;
+    margin-bottom: 35px;
+
+  }
+
+  & li {
+    margin: 2px 0;
+  }
 }
 
 .article__title {
@@ -21,15 +71,23 @@
   font-family: 'Geometria', 'Verdana', sans-serif;
   @include set-font-size($h2-font-size);
   font-weight: 800;
-  // font-size: 30px;
-  // line-height: 30px;
   color: $text-black;
   text-transform: uppercase;
+}
+
+.article--aside {
+  @include clearfix;
+  padding-bottom: 0;
 }
 
 @media ($tablet-widths) {
   .article {
     @include wrapper;
+
+    & h3 {
+      @include set-font-size($menu-main-font-size, large);
+      margin-bottom: 25px;
+    }
   }
   .article__wrapper {
     column-count: 2;
@@ -41,9 +99,30 @@
     margin-bottom: 40px;
     @include set-font-size($h2-font-size, medium);
   }
+
+  .article--aside {
+    padding-bottom: 40px;
+
+    & .article__wrapper {
+      float: left;
+      column-count: 1;
+      width: 51%;
+    }
+  }
 }
 
 @media ($desktop-widths) {
+  .article--aside {
+    @include clearfix;
+    padding-bottom: 60px;
+
+    & .article__wrapper {
+      float: left;
+      column-count: 1;
+      width: 51%;
+    }
+  }
+
  .article__title {
     margin-top: 35px;
     margin-bottom: 50px;

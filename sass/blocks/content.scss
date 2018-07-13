@@ -2,6 +2,13 @@
   margin-top: 50px;
 }
 
+.content__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 .content__title {
   margin: 0;
   display: flex;
@@ -33,6 +40,10 @@
     margin-top: 0;
   }
 
+  .content__wrapper {
+    @include wrapper;
+    flex-direction: row;
+  }
   .content__title {
     min-height: 240px;
     font-size: 60px;
@@ -42,6 +53,10 @@
 }
 
 @media ($desktop-widths) {
+  .content__wrapper {
+
+  }
+
   .content__title {
     min-height: 409px;
     font-size: 90px;

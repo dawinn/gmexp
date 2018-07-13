@@ -30,6 +30,7 @@
   padding-bottom: 25px;
   min-width: 182px;
   max-width: 250px;
+  line-height: 15px;
   background-color: $bg-white;
   list-style: none;
   border-bottom: 2px solid #a5a5aa;
@@ -66,6 +67,7 @@
 
 .about--aside {
   padding-bottom: 30px;
+  margin: 0 -15px;
 
   & a {
     text-decoration: none;
@@ -105,15 +107,12 @@
 
     &.about--aside {
       padding: 0;
+      padding-top: 100px;
       margin: 0;
-      float: right;
-      position: relative;
-      width: 49%;
-      top: -55px;
+      width: auto;
+      max-width: 50%;
     }
   }
-
-
 
   .about__item {
     padding-left: 70px;
@@ -137,15 +136,17 @@
   .about--aside .about__list {
     margin: 0;
     padding: 0;
-    margin-left: 30px;
+    margin-left: 60px;
   }
 
   .about--aside .about__item {
     background-color: #e7e8eb;
     margin-top: 0;
-    margin-bottom: 10px;
-    padding-bottom: 0;
+    margin-bottom: 20px;
+    padding-top: 18px;
+    padding-bottom: 10px;
     max-width: none;
+    border-radius: 3px;
 
     &:hover {
       background-color: #d7d7da;
@@ -165,7 +166,6 @@
     }
   }
 
-
   .about__more {
     display: table;
     margin: 22px auto;
@@ -177,6 +177,10 @@
   .about {
     margin-bottom: 94px;
     padding-top: 100px;
+
+    &.about--aside {
+      padding-top: 150px;
+    }
   }
 
   .about__title,
@@ -218,18 +222,14 @@
     list-style: none;
   }
 
-  .about--aside {
-    top: -75px;
-  }
-
   .about--aside .about__list {
-    margin-left: 163px;
+    margin-left: 172px;
   }
 
   .about--aside .about__item {
-    padding-top: 28px;
-    border-radius: 3px;
-    padding-bottom: 0;
+    padding-top: 30px;
+    border-radius: 5px;
+    padding-bottom: 20px;
     margin-bottom: 34px;
 
     &:before {

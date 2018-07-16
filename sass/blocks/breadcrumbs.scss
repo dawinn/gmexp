@@ -6,23 +6,25 @@
 
   & a {
     padding-bottom: 2px;
+    margin-right: 10px;
     font-family: 'Open Sans', 'Arial', sans-serif;
     font-weight: normal;
 
     color: $text-red;
+    line-height: 28px;
     text-decoration: none;
   }
 
   & a + a{
     position: relative;
-    margin-left: 10px;
-    padding-left: 21px;
+    margin-left: 21px;
+    // padding-left: 21px;
   }
 
   & a + a:before {
     content: '';
     position: absolute;
-    left: 0;
+    left: -21px;
     bottom: 9px;
     display: block;
     width: 11px;
@@ -33,7 +35,7 @@
    & a + a:after {
     content: '';
     position: absolute;
-    left: 5px;
+    left: -14px;
     top: 8px;
     display: block;
     width: 4px;

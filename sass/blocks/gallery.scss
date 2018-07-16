@@ -1,17 +1,40 @@
-.news {
+.gallery {
   position: relative;
+
   margin: 0;
   padding-bottom: 22px;
-  background-color: $bg-gray;
 }
 
-.news__wrapper {
+.gallery--equipments {
+  & .gallery__list {
+    margin: 0 -10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  & .gallery__item {
+    width: calc(50% - 20px);
+    flex-grow: 1;
+    font-weight: 400;
+  }
+
+  & .gallery__caption {
+    padding-bottom: 20px;
+  }
+}
+
+
+
+
+.gallery__wrapper {
   padding: 0 10px;
+  padding-top: 13px;
 }
 
-.news__title {
+.gallery__title {
   margin: 0;
-  padding-top: 13px;
+
   margin-bottom: 4px;
   padding: 0;
   font-family: 'Geometria', 'Verdana', sans-serif;
@@ -22,11 +45,11 @@
   text-align: center;
 }
 
-.news__subtitle {
+.gallery__subtitle {
   @include hide;
 }
 
-.news__list {
+.gallery__list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -36,7 +59,7 @@
   line-height: 0;
 }
 
-.news__item {
+.gallery__item {
   position: relative;
   margin: 0 10px;
   margin-bottom: 25px;
@@ -55,23 +78,23 @@
  }
 }
 
-.news--index {
-  & .news__list {
+.gallery--index {
+  & .gallery__list {
     margin: 0 auto;
     padding: 0 10px;
   }
 
-  & .news__item {
+  & .gallery__item {
     background-color: $bg-white;
     color: inherit;
   }
 
-  & .news__title {
+  & .gallery__title {
     color: $text-black;
   }
 }
 
-.news__caption {
+.gallery__caption {
   margin: 0;
   margin-top: 15px;
   margin-bottom: 4px;
@@ -84,93 +107,93 @@
   text-transform: uppercase;
 }
 
-.news__img {
+.gallery__img {
   width: 100%;
   height: auto;
 }
-.news__all {
+.gallery__all {
   display: table;
   margin: 22px auto;
   white-space: nowrap;
 }
 
-.news__pagination {
+.gallery__pagination {
   position: relative;
   bottom: -20px;
   padding-bottom: 40px;
 }
 
 @media ($tablet-widths) {
-  .news--index {
+  .gallery--index {
     padding-top: 60px;
 
   }
 
-  .news__wrapper {
+  .gallery__wrapper {
     @include wrapper;
   }
 
-  .news__title {
+  .gallery__title {
     @include set-font-size($h2-font-size, medium);
   }
 
-  .news__item {
+  .gallery__item {
     width: calc(25% - 28px);
     border-bottom-color: transparent;
   }
 
-  .news__caption {
+  .gallery__caption {
     font-size: 12px;
   }
 
-  .news__pagination {
+  .gallery__pagination {
     bottom: 53px;
     padding-bottom: 0;
   }
 }
 
 @media ($desktop-widths) {
-  .news {
+  .gallery {
 
     padding-bottom: 77px;
   }
 
-  .news--index {
+  .gallery--index {
     padding-top: 80px;
 
 
-    & .news__list {
+    & .gallery__list {
       margin: 0 -10px;
       padding: 0;
       padding-top: 30px;
       padding-bottom: 45px;
     }
   }
-  .news__title {
+  .gallery__title {
     @include set-font-size($h2-font-size, large);
     text-align: initial;
     padding: 0;
   }
 
-  .news__subtitle {
+  .gallery__subtitle {
     @include show;
     @include set-font-size($h2-sub-font-size, large);
     text-transform: lowercase;
   }
 
-  .news__list {
+  .gallery__list {
     padding: 0;
     padding-top: 33px;
     padding-bottom: 45px;
   }
 
-  .news__item {
+  .gallery__item {
     font-size: 13px;
     line-height: 18px;
     text-align: center;
   }
 
-  .news__pagination {
+  .gallery__pagination {
     bottom: 53px;
   }
 }

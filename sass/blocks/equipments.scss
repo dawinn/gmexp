@@ -7,27 +7,26 @@
 }
 
 .equipments__toggle {
-  position: absolute;
-  width: 20px;
-  height: 25px;
-  top: 5px;
+  position: fixed;
+  width: 10px;
+  height: calc(100vh - 210px);
+  top: 210px;
   background-color: $bg-red;
 
   border: none;
   border-radius: 0 3px 3px 0;
-  overflow: hidden;
   font-size: 0;
 
-  &:before {
+  &::after  {
     content: '';
     position: absolute;
     width: 7px;
     height: 7px;
     top: 8px;
-    left: 8px;
+    left: 0;
     border-top: 1px solid $bg-white;
     border-right: 1px solid $bg-white;
-    transform: rotate(-135deg);
+    transform: rotate(45deg);
 
   }
 }
@@ -93,6 +92,17 @@
   }
 }
 
+.equipments__type--current,
+.equipments__item--current{
+  background-color: $bg-red;
+
+  & > .equipments__link{
+    border-bottom: 1px solid $bg-red;
+  }
+
+
+}
+
 .equipments__items {
   display: none;
   margin: 0;
@@ -151,38 +161,83 @@
   }
 
   .equipments__wrapper {
+    height: calc(100vh - 202px);
     overflow: scroll;
     z-index: 10;
+    background-color: $bg-red-dark;
+    color: $text-white;
+    transition: margin-left 1s;
   }
 
   .equipments--closed {
     height: 10px;
 
     & .equipments__wrapper {
-      display: none;
-
+      width: 0;
+      margin-left: -100%;
     }
   }
 
    .equipments--opened {
 
     & .equipments__wrapper {
-      display: block;
-      height: calc(100vh - 202px);
+      position: fixed;
+      width: 100%;
+      height: calc(100vh - 49px);
+      margin-left: 0%;
+      top: 50px;
     }
 
+    & .equipments__toggle {
+      width: 20px;
+      height: 20px;
+      top: 55px;
+      right: 10px;
+      z-index: 20;
+      background-color: $bg-red-dark;
+      border: 1px solid $bg-white;
+      border-radius: 3px;
+    }
 
+    & .equipments__toggle:hover {
+      opacity: 0.9;
+    }
+
+    & .equipments__toggle:active {
+      opacity: 0.5;
+    }
+
+    & .equipments__toggle::before,
+    .equipments__toggle::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 2px;
+      background-color: $bg-white;
+      top: 8px;
+      left: 1px;
+      border: none;
+      transform: rotate(45deg);
+    }
+    .equipments__toggle::after {
+      transform: rotate(-45deg);
+    }
    }
+
+  .equipments__type label::before {
+    border-top: 1px solid $bg-white;
+    border-right: 1px solid $bg-white;
+  }
+
+  .equipments__open-list:checked ~ .equipments__items {
+    background-color: $bg-red-dark;
+  }
 
   .equipments__link {
     margin: 0 15px;
     width: 270px;
+    color: $text-white;
   }
-
-  .equipments__open-list:checked ~ .equipments__items {
-    background-color: $bg-white;
-  }
-
 
   .equipments--nojs .equipments__toggle {
     display: none;

@@ -57,6 +57,11 @@
   }
 }
 
+.article--contacts strong {
+  color: inherit;
+  font-weight: bolder;
+}
+
 .article__title {
   margin: 0;
   margin-top: 26px;
@@ -68,9 +73,19 @@
   text-transform: uppercase;
 }
 
+.article__pagination {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 @media ($only-mobyle-widths) {
   .article table {
     font-size: 10px;
+  }
+
+  .article__pagination > *{
+    margin-bottom: 20px;
   }
 }
 
@@ -83,7 +98,7 @@
     }
   }
   .article__wrapper {
-    column-width: 360px;
+    column-width: 359px;
     column-gap: 30px;
   }
 
@@ -91,6 +106,10 @@
     margin-top: 30px;
     margin-bottom: 40px;
     @include set-font-size($h2-font-size, medium);
+  }
+
+  .article__pagination {
+    flex-direction: row;
   }
 }
 

@@ -1,6 +1,4 @@
 .article {
-  margin: 0 auto;
-  padding: 0 15px;
   padding-bottom: 50px;
 
   &  p {
@@ -29,11 +27,6 @@
     margin-bottom: 40px;
     width: 100%;
     border-collapse: collapse;
-  }
-
-
-  & tr {
-
   }
 
   & td,
@@ -75,14 +68,14 @@
   text-transform: uppercase;
 }
 
-.article--aside {
-  @include clearfix;
-  padding-bottom: 0;
+@media ($only-mobyle-widths) {
+  .article table {
+    font-size: 10px;
+  }
 }
 
 @media ($tablet-widths) {
   .article {
-    @include wrapper;
 
     & h3 {
       @include set-font-size($menu-main-font-size, large);
@@ -90,7 +83,7 @@
     }
   }
   .article__wrapper {
-    column-count: 2;
+    column-width: 360px;
     column-gap: 30px;
   }
 
@@ -99,29 +92,9 @@
     margin-bottom: 40px;
     @include set-font-size($h2-font-size, medium);
   }
-
-  .article--aside {
-    padding-bottom: 40px;
-
-    & .article__wrapper {
-      float: left;
-      column-count: 1;
-      width: 51%;
-    }
-  }
 }
 
 @media ($desktop-widths) {
-  .article--aside {
-    @include clearfix;
-    padding-bottom: 60px;
-
-    & .article__wrapper {
-      float: left;
-      column-count: 1;
-      width: 51%;
-    }
-  }
 
  .article__title {
     margin-top: 35px;

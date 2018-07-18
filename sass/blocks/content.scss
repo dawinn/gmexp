@@ -35,6 +35,10 @@
   }
 }
 
+.content__news {
+  background-color: $bg-gray;
+}
+
 @media ($tablet-widths) {
   .content {
     margin-top: 0;

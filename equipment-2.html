@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#ac1212">
   <title>Гормашэкспорт - Оборудование - Дробильное оборудование</title>
   <link rel="icon" type="image/ico" href="favicon.ico">
   <link href="css/style.css" rel="stylesheet">
@@ -72,8 +73,8 @@
             По типу:
           </h3>
           <ul class="equipments__types">
-            <li class="equipments__type">
-              <input class="equipments__open-list" type="checkbox" name="equipment" id='equipmentID1'>
+            <li class="equipments__type  equipments__type--current">
+              <input class="equipments__open-list" type="checkbox" name="equipment" id='equipmentID1' checked="checked">
               <label for='equipmentID1'></label>
               <a class="equipments__link">Дробильное оборудование</a>
               <ul class="equipments__items">
@@ -289,19 +290,38 @@
         </div>
         </div>
       </nav>
-      <article class="article">
+      <article class="gallery  gallery--equipments">
         <nav class="breadcrumbs">
           <a href="index.html">Главная страница</a>
-          <a >Оборудование</a>
+          <a href="equipment-1.html">Оборудование</a>
+          <a >Дробильное оборудование</a>
         </nav>
-        <h2 class="article__title">
-          Подбор оборудования
-        </h2>
-        <div class="article__wrapper">
-          <p>Гормашэкспорт осуществляет свою деятельность на рынке горно-обогатительного оборудования и технологий с 2000 г. За это время было спроектировано и внедрено в производство большое количество обогатительного оборудования и комплексных проектов "под ключ" и разработаны новые технологии обогащения минералов. Рудоподготовка, обогащение руд, обогащение угля, сухое обогащение, обогащение песка, очистка промышленных сточных вод, сгущение и водооборот, переработка мусора и ТБО –основные области решаемых нами задач.
-          </p>
-          <img src='./img/about-1.jpg' alt=''>
-        </div>
+         <div class="gallery__list">
+            <section class="gallery__item">
+              <div class="gallery__img-wrap">
+                <img src="./img/eqiup-1.jpg" class="gallery__img">
+              </div>
+              <h3 class="gallery__caption">
+                Дробилки шнекозубчатые, валковые
+              </h3>
+            </section>
+            <section class="gallery__item">
+              <div class="gallery__img-wrap">
+                <img src="./img/eqiup-2.jpg" class="gallery__img" >
+              </div>
+              <h3 class="gallery__caption">
+                Дробилка-грохот барабанный
+              </h3>
+            </section>
+            <section class="gallery__item">
+              <div class="gallery__img-wrap">
+                <img src="./img/eqiup-3.jpg" class="gallery__img" width="257" height="270">
+              </div>
+              <h3 class="gallery__caption">
+                Шредеры
+              </h3>
+            </section>
+          </div>
       </article>
     </div>
 

@@ -100,6 +100,12 @@
   .article__wrapper {
     column-width: 359px;
     column-gap: 30px;
+    columns: 2;
+  }
+
+  .article--aside .article__wrapper {
+    columns: 1;
+    width: 344px;
   }
 
   .article__title {
@@ -110,6 +116,10 @@
 
   .article__pagination {
     flex-direction: row;
+  }
+
+  .article table {
+    font-size: 11px;
   }
 }
 

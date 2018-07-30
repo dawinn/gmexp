@@ -1,6 +1,6 @@
 .about {
   margin: 0;
-
+  display: block;
   background-color: $bg-gray;
 }
 
@@ -10,10 +10,6 @@
 }
 
 .about__list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
   margin: 0 auto;
   padding: 0 10px;
   padding-bottom: 20px;
@@ -22,12 +18,15 @@
 .about__item,
 .about--aside .about__item {
   position: relative;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0;
   margin: 0 auto;
   margin-top: 10px;
   padding-top: 21px;
   padding-left: 78px;
   padding-right: 20px;
-  padding-bottom: 25px;
+  padding-bottom: 10px;
   min-width: 182px;
   max-width: 250px;
   line-height: 15px;
@@ -35,8 +34,9 @@
   list-style: none;
   border-bottom: 2px solid #a5a5aa;
 
+
   &::before {
-    content: "";
+   content: "";
     position: absolute;
     top: 21px;
     left: 30px;
@@ -87,12 +87,17 @@
 
 .about__item-caption {
   margin: 0;
-  margin-bottom: 14px;
   font-family: "Geometria", "Verdana", sans-serif;
   font-weight: 500;
   font-size: 18px;
-  line-height: 21px;
+  line-height: 16px;
   color: $text-black;
+}
+
+.about__item-details {
+  font-family: 'Open Sans', 'Arial' , sans-serif;
+  font-size: 13px;
+  line-height: 19px;
 }
 
 .about__more {
@@ -110,9 +115,17 @@
       padding-top: 90px;
       margin: 0;
       margin-top: 10px;
-      width: auto;
-      max-width: 50%;
+      padding-left: 40px;
+      padding-right: 0;
+      width: 364px;
     }
+  }
+
+  .about__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .about__item {
@@ -122,9 +135,11 @@
     min-width: 182px;
     border-bottom-color: transparent;
     line-height: 18px;
+    width: 330px;
+
 
     &::before {
-      left: 0px;
+      left: 15px;
       width: 25px;
       height: 25px;
     }
@@ -137,16 +152,18 @@
   .about--aside .about__list {
     margin: 0;
     padding: 0;
-    margin-left: 60px;
+    // margin-left: 60px;
   }
 
   .about--aside .about__item {
     background-color: #e7e8eb;
+    margin: 0;
     margin-top: 0;
     margin-bottom: 20px;
     padding-top: 18px;
     padding-bottom: 10px;
-    max-width: none;
+    max-width: 254px;
+    width: 254px;
     border-radius: 3px;
 
     &:hover {
@@ -221,6 +238,10 @@
     width: auto;
     background-color: $bg-white;
     list-style: none;
+
+    &::before {
+      left: 0;
+    }
   }
 
   .about--aside .about__list {

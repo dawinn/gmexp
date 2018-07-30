@@ -1,15 +1,17 @@
 .project {
   position: relative;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0;
   margin: 0 10px;
   margin-bottom: 17px;
   padding: 0;
   min-width: 182px;
-  max-width: 300px;
   width: 100%;
+  flex-basis: 100%;
   overflow: hidden;
-  // background-color: $bg-white;
   background-color: $bg-dark;
-  list-style: none;
+
 
   color: $text-white;
   line-height: 0;
@@ -43,11 +45,11 @@
 
 @media ($tablet-widths) {
   .project {
-    width: calc(50% - 20px);
-
+    width: 364px;
+    flex-basis: 364px;
     &:nth-child(n+3) {
-    display: block;
-  }
+      display: inline-block;
+    }
   }
 
 }

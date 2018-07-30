@@ -18,6 +18,9 @@
 
 
 .footer__logo {
+  display: inline-block;
+  font-size: 0;
+  vertical-align: top;
   order: 1;
   margin: 32px 0;
   width: 230px;
@@ -32,6 +35,9 @@
 }
 
 .footer__address {
+  display: inline-block;
+  font-size: 0;
+  vertical-align: top;
   order: 2;
 
   padding-bottom: 24px;
@@ -57,6 +63,9 @@
 }
 
 .footer__copyright {
+  display: inline-block;
+  font-size: 0;
+  vertical-align: top;
   order: 4;
 
   margin: 20px auto;
@@ -69,7 +78,7 @@
 }
 
 .footer__menu {
-  display: block;
+  display: inline-block;
   padding-bottom: 24px;
   padding-top: 25px;
 
@@ -88,32 +97,36 @@
 
 @media ($tablet-widths) {
   .footer__wrapper {
+    @include wrapper;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     padding-top: 50px;
   }
 
   .footer__address {
     order: 1;
-    width: calc(50% - 40px);
+    width: 338px;
+    flex-basis: 338px;
     @include set-font-size($menu-footer-font-size, medium);
   }
 
   .footer__logo {
     order: 2;
     margin: 0;
+    float:right;
     margin-bottom: 30px;
     width: 213px;
     height: 119px;
   }
 
   .footer__menu {
-    display: flex;
-    justify-content: space-evenly;
+    order: 3;
+    display: inline-block;
     width: 100%;
+    flex-basis: 100%;
     padding-right: 50px;
+    color: white;
   }
-
 }
 
 @media ($desktop-widths) {
@@ -121,12 +134,13 @@
     padding: 0;
     margin: 0;
     padding-top: 80px;
-
   }
 
   .footer__wrapper {
-    @include wrapper;
-    justify-content: space-between;
+    max-width: 688px;
+    margin: 0 auto;
+    padding: 0 40px;
+    justify-content: space-around;
     align-items: flex-start;
   }
 

@@ -4,12 +4,6 @@
 
 .search__form {
   height: 49px;
-  // background-color: #fafbfd;
-
-  // &:focus,
-  // &:focus-within {
-  //   margin-right: -160px;
-  // }
 }
 
 .search__label {
@@ -104,7 +98,6 @@
     text-transform: uppercase;
 
     &::placeholder {
-      display: block;
       font-size: 10px;
       text-transform: uppercase;
 

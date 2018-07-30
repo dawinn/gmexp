@@ -31,9 +31,9 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   margin: 0 auto;
-  padding: 0 10px;
+  font-size: 0;
 }
 
 .projects__all {
@@ -45,6 +45,10 @@
 @media ($tablet-widths) {
   .projects__wrapper {
     @include wrapper();
+  }
+
+  .projects__list {
+    margin: 0 -10px;
   }
 }
 

@@ -10,6 +10,10 @@
 }
 
 .about__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0 auto;
   padding: 0 10px;
   padding-bottom: 20px;
@@ -18,8 +22,7 @@
 .about__item,
 .about--aside .about__item {
   position: relative;
-  display: inline-block;
-  vertical-align: top;
+  display: block;
   font-size: 0;
   margin: 0 auto;
   margin-top: 10px;
@@ -152,7 +155,6 @@
   .about--aside .about__list {
     margin: 0;
     padding: 0;
-    // margin-left: 60px;
   }
 
   .about--aside .about__item {

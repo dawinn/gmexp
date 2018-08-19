@@ -23,3 +23,22 @@ img {
 .current {
   font-weight: 800;
 }
+
+.notice {
+  position: fixed;
+  display: block;
+  top: 60px;
+  left: 15px;
+  right: 15px;
+
+
+  font-size: 14px;
+  color: white;
+
+  & p {
+    padding: 10px;
+    background-color: #f73838;
+  }
+
+
+}

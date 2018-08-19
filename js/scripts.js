@@ -44,19 +44,82 @@
 
 
   const eqiupMenu = document.querySelector('.equipments');
-  const eqiupToggle = document.querySelector('.equipments__toggle');
+
+  const switchEquipMenu =  function(menu, on = false) {
+    menu.classList.toggle('equipments--closed', !on);
+    menu.classList.toggle('equipments--opened', on);
+  };
 
   if (eqiupMenu) {
+    const eqiupToggle = document.querySelector('.equipments__toggle');
     eqiupMenu.classList.remove('equipments--nojs');
 
-    eqiupMenu.addEventListener('click', function() {
-      if (eqiupMenu.classList.contains('equipments--closed')) {
-        eqiupMenu.classList.remove('equipments--closed');
-        eqiupMenu.classList.add('equipments--opened');
-      } else {
-        eqiupMenu.classList.add('equipments--closed');
-        eqiupMenu.classList.remove('equipments--opened');
-      }
+    eqiupToggle.addEventListener('click', function() {
+      switchEquipMenu(eqiupMenu, eqiupMenu.classList.contains('equipments--closed'));
     });
+
+    if (1) {
+      const touchsurface = document.createElement('div');
+      touchsurface.classList.add(`equipments__touchsurface`);
+      eqiupMenu.insertBefore(touchsurface, eqiupMenu.firstElementChild);
+
+      const notice = document.createElement('div');
+      notice.classList.add(`notice`);
+      notice.innerHTML = `<p>Смахните вправо, чтобы открыть каталог.</p><button class='link  notice__link-close'>OK</button>`;
+      eqiupMenu.insertBefore(notice, eqiupMenu.firstElementChild);
+
+      notice.querySelector(`.notice__link-close`).addEventListener(`click`, function(e) {
+        e.preventDefault();
+        notice.parentNode.removeChild(notice);
+      })
+      //
+      window.addEventListener('load', function(){
+        // const touchsurface = document.querySelector('body');
+        let startX = 0;
+        let startY = 0;
+        let dist = 0;
+        const threshold = 60; // минимальное расстояние для swipe
+        const allowedTime = 200; // максимальное время прохождения установленного расстояния
+        let elapsedTime = 0;
+        let startTime = 0;
+
+        function handleswipe(isRightSwipe){
+            switchEquipMenu(eqiupMenu, isRightSwipe);
+        }
+
+        touchsurface.addEventListener('touchstart', function(e){
+            touchsurface.innerHTML = ''
+            var touchobj = e.changedTouches[0]
+            dist = 0
+            startX = touchobj.pageX
+            startY = touchobj.pageY
+            startTime = new Date().getTime() // время контакта с поверхностью сенсора
+            e.preventDefault()
+        }, false)
+
+        touchsurface.addEventListener('touchmove', function(e){
+            e.preventDefault() // отключаем стандартную реакцию скроллинга
+        }, false)
+
+        touchsurface.addEventListener('touchend', function(e){
+            var touchobj = e.changedTouches[0]
+            dist = touchobj.pageX - startX // получаем пройденную дистанцию
+            elapsedTime = new Date().getTime() - startTime // узнаем пройденное время
+            // проверяем затраченное время,горизонтальное перемещение >= threshold, и вертикальное перемещение <= 100
+            var swiperightBol = (elapsedTime <= allowedTime && dist >= threshold && Math.abs(touchobj.pageY - startY) <= 100)
+            handleswipe(swiperightBol)
+            e.preventDefault()
+        }, false)
+
+      }, false)
+
+    }
+
   }
+
+
+
+
+
+
 })();

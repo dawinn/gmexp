@@ -38,7 +38,37 @@
       box-shadow: none;
     }
   }
+
+  &.link--up {
+    position: fixed;
+    display: none;
+    width: 5px;
+    height: 5px;
+    margin: 0;
+    padding: 15px;
+    bottom: 10px;
+    right: 10px;
+    z-index: 100;
+    font-size: 0;
+
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 10px;
+        height: 10px;
+        left: 11.5px;
+        border-top: 2px solid $text-white;
+        border-right: 2px solid $text-white;
+        transform: rotate(-45deg);
+      }
+  }
+
+  &.link--show {
+    display: block;
+  }
 }
+
 
 @media ($tablet-widths) {
   .link {
